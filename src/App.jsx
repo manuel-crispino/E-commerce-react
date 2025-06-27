@@ -8,9 +8,9 @@ import CartContextProvider from './store/shopping-cart-context.jsx';
 function App() {
 
   return (
-    <CartContextProvider value={ctxValue}>
+    <CartContextProvider>
       <Header/>
-      <Shop onAddItemToCart={handleAddItemToCart} >
+      <Shop>
           {DUMMY_PRODUCTS.map((product) => (
           <li key={product.id}>
             <Product {...product}/>
